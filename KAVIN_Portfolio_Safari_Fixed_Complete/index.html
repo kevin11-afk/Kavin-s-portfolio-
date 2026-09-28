@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAVIN — AI & Data Science</title>
+<meta name="description" content="Kavin — AI & Data Science student, developer and technology creator.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="hero-poster.jpg">
+<style>:root{--bg:#f4f3ef;--ink:#11110f;--muted:#77756f;--line:rgba(17,17,15,.14);--dark:#0b0b0a;--lime:#d8ff52;--paper:#eeece6}
+
+*{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;overflow-x:hidden}body.modal-open{overflow:hidden}
+a{color:inherit;text-decoration:none}.noise{position:fixed;inset:0;pointer-events:none;opacity:.028;z-index:100;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+nav{position:fixed;z-index:40;top:0;left:0;width:100%;padding:24px 5vw;display:flex;justify-content:space-between;align-items:center;mix-blend-mode:difference;color:#fff}.logo{font:800 20px "Space Grotesk";letter-spacing:-.06em}.navlinks{display:flex;gap:28px;font-size:11px;text-transform:uppercase;letter-spacing:.13em}.navlinks a{transition:opacity .25s}.navlinks a:hover{opacity:.55}
+.hero{height:330vh;position:relative}.hero-sticky{height:100vh;position:sticky;top:0;overflow:hidden;background:#050505;color:#fff}/* Keep the cinematic hero completely clean: hide native media UI / start-playback overlays. */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-panel,
+.hero-video::-webkit-media-controls-start-playback-button,
+.hero-video::-webkit-media-controls-overlay-play-button{display:none !important;-webkit-appearance:none;appearance:none}
+.hero-video{pointer-events:none;}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.03);opacity:.94;filter:saturate(.96) contrast(1.03)}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,.04) 62%),linear-gradient(0deg,rgba(0,0,0,.78),transparent 52%);z-index:2}.hero-copy{position:absolute;z-index:3;left:5vw;bottom:10vh;max-width:950px;opacity:0;transform:translateY(34px);transition:opacity 1.2s ease,transform 1.2s cubic-bezier(.2,.7,.2,1)}.hero-copy.show{opacity:1;transform:translateY(0)}.eyebrow{font-size:10px;letter-spacing:.25em;text-transform:uppercase;opacity:.7;margin-bottom:18px}.hero h1{font:700 clamp(70px,15vw,220px)/.78 "Space Grotesk";letter-spacing:-.09em;margin:0;transform-origin:left bottom}.hero-copy.show h1{animation:heroName 1.35s cubic-bezier(.16,1,.3,1) both}@keyframes heroName{0%{opacity:0;transform:translateY(35px) scale(.92);filter:blur(10px)}55%{opacity:1;filter:blur(0)}100%{transform:translateY(0) scale(1);filter:blur(0)}}.hero-sub{margin-top:32px;font-size:clamp(15px,1.7vw,24px);max-width:700px;line-height:1.4;color:rgba(255,255,255,.72)}.hero-sub b{color:#fff}.scrollhint{position:absolute;z-index:4;right:5vw;bottom:8vh;writing-mode:vertical-rl;text-transform:uppercase;letter-spacing:.25em;font-size:9px;opacity:.65}.scrollhint::after{content:'';display:block;width:1px;height:55px;background:rgba(255,255,255,.45);margin:12px auto 0}.progress{position:fixed;z-index:45;right:24px;top:50%;transform:translateY(-50%);height:90px;width:2px;background:rgba(255,255,255,.18);mix-blend-mode:difference}.progress i{display:block;width:100%;height:0;background:#fff}
+.section{padding:16vh 5vw;position:relative}.intro{min-height:115vh;display:flex;align-items:center;background:var(--bg)}.intro-grid{display:grid;grid-template-columns:.8fr 2fr;gap:7vw;width:100%;align-items:start}.label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}.statement{font:600 clamp(38px,6vw,88px)/.98 "Space Grotesk";letter-spacing:-.06em;max-width:1100px}.statement span{color:#aaa9a3}.dialogue{max-width:1100px}.dialogue-line{display:block}.dialogue-line:nth-child(2){color:#a9a8a2}.dialogue-line:nth-child(3){color:#a9a8a2}.identity-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:70px;border-top:1px solid var(--line)}.meta-card{padding:18px 0;border-bottom:1px solid var(--line)}.meta-card strong{display:block;font:600 30px "Space Grotesk";letter-spacing:-.04em}.meta-card small{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}.reveal{opacity:0;transform:translateY(45px)}
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);white-space:nowrap}.marquee-track{display:inline-flex;gap:60px;padding:26px 0;font:600 45px "Space Grotesk";letter-spacing:-.04em;animation:mar 22s linear infinite}@keyframes mar{to{transform:translateX(-50%)}}
+.work{background:var(--dark);color:#f4f3ef}.work .label{color:#777}.project-link{display:block}.project{min-height:78vh;border-top:1px solid rgba(255,255,255,.15);display:grid;grid-template-columns:1fr 2fr;align-items:center;gap:5vw;position:relative;transition:padding .5s ease}.project::after{content:'OPEN PROJECT ↗';position:absolute;right:0;bottom:26px;font-size:9px;letter-spacing:.14em;color:#777;transition:color .3s,transform .3s}.project:hover{padding-left:18px}.project:hover::after{color:#fff;transform:translateX(-8px)}.project-num{font:500 12px "Space Grotesk";color:#777}.project h3{font:600 clamp(48px,8vw,120px)/.84 "Space Grotesk";letter-spacing:-.07em;margin:0;transition:transform .5s cubic-bezier(.2,.7,.2,1)}.project:hover h3{transform:translateX(10px)}.project p{max-width:620px;color:#999;line-height:1.6;font-size:15px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.tag{border:1px solid rgba(255,255,255,.18);padding:8px 12px;border-radius:100px;font-size:10px;text-transform:uppercase;letter-spacing:.1em}.project-link .tag{transition:background .3s,color .3s}.project-link:hover .tag{background:#f4f3ef;color:#111}
+.certifications{background:#e6e4dd}.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8vh}.cert{position:relative;overflow:hidden;background:#f7f6f2;border:1px solid var(--line);border-radius:6px;min-height:390px;cursor:pointer;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s ease,border-color .3s}.cert:hover{transform:translateY(-12px) scale(1.012);box-shadow:0 30px 70px rgba(17,17,15,.18);border-color:rgba(17,17,15,.28)}.cert-image-wrap{height:245px;overflow:hidden;background:#ddd}.cert-image{width:100%;height:100%;display:block;object-fit:cover;object-position:center;background:#ddd;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .5s}.cert:hover .cert-image{transform:scale(1.07);filter:saturate(1.08)}.cert-info{padding:24px}.cert-no{font-size:9px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase}.cert h3{font:600 clamp(22px,2.5vw,34px)/.95 "Space Grotesk";letter-spacing:-.045em;margin:14px 0 9px}.cert p{font-size:11px;color:var(--muted);line-height:1.5;margin:0}.cert-badge{display:inline-block;margin-top:14px;font-size:9px;text-transform:uppercase;letter-spacing:.12em;border:1px solid var(--line);padding:7px 10px;border-radius:50px}.cert::after{content:'CLICK TO VIEW ↗';position:absolute;right:18px;top:18px;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);padding:8px 10px;font-size:8px;letter-spacing:.12em;transition:transform .35s,background .35s}.cert:hover::after{transform:translateY(-2px);background:#fff}.cert:focus-visible{outline:2px solid #111;outline-offset:5px}.cert::before{content:"";position:absolute;inset:-40%;background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.42) 50%,transparent 58%);transform:translateX(-70%) rotate(8deg);transition:transform .8s ease;pointer-events:none;z-index:3}.cert:hover::before{transform:translateX(70%) rotate(8deg)}.cert-modal{position:fixed;inset:0;z-index:200;background:rgba(8,8,7,.9);backdrop-filter:blur(16px);display:none;align-items:center;justify-content:center;padding:5vw}.cert-modal.open{display:flex}.cert-modal-inner{position:relative;width:min(1180px,94vw);max-height:90vh;display:flex;align-items:center;justify-content:center}.cert-modal img{max-width:100%;max-height:88vh;object-fit:contain;box-shadow:0 35px 100px rgba(0,0,0,.45)}.modal-close{position:absolute;right:-6px;top:-48px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:100px;width:36px;height:36px;font-size:18px;cursor:pointer}.modal-caption{position:absolute;left:0;bottom:-34px;color:rgba(255,255,255,.7);font-size:10px;text-transform:uppercase;letter-spacing:.12em}
+.expertise{background:#f4f3ef}.skills{display:grid;grid-template-columns:repeat(3,1fr);margin-top:8vh;border-top:1px solid var(--line)}.skill{padding:28px 0;border-bottom:1px solid var(--line);font:500 clamp(20px,3vw,40px) "Space Grotesk";transition:padding .35s}.skill:hover{padding-left:12px}.skill small{display:block;font:400 10px Inter;color:var(--muted);margin-top:8px;text-transform:uppercase;letter-spacing:.1em}
+.contact{min-height:105vh;background:#090908;color:#f4f3ef;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.contact::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 78% 47%,rgba(255,120,35,.08),transparent 23%),radial-gradient(circle at 80% 47%,rgba(78,205,255,.05),transparent 36%);pointer-events:none}.contact .label{color:#777}.contact h2{font:600 clamp(70px,14vw,210px)/.8 "Space Grotesk";letter-spacing:-.09em;margin:0;position:relative;z-index:4}.contact-intro{max-width:620px;color:#a9a8a2;font-size:15px;line-height:1.7;margin-top:25px;position:relative;z-index:4}.portal-stage{position:absolute;right:3vw;top:13%;width:min(570px,45vw);height:min(570px,45vw);min-width:430px;min-height:430px;z-index:2;display:grid;place-items:center;filter:drop-shadow(0 0 40px rgba(255,100,20,.12));isolation:isolate}
+.portal-stage::before{content:"";position:absolute;width:82%;height:82%;border-radius:50%;background:radial-gradient(circle,rgba(255,156,74,.16) 0 8%,rgba(255,93,20,.07) 22%,transparent 54%);filter:blur(14px);animation:portalPulse 2.8s ease-in-out infinite}
+.portal-ring{position:absolute;border-radius:50%;pointer-events:none}.portal-ring.outer{inset:4%;border:1px solid rgba(255,164,90,.24);box-shadow:0 0 25px rgba(255,92,30,.08),inset 0 0 25px rgba(255,92,30,.06);animation:portalSpin 22s linear infinite}.portal-ring.outer::before,.portal-ring.outer::after{content:"";position:absolute;inset:4%;border-radius:50%;border:1px dashed rgba(255,121,49,.32)}.portal-ring.outer::after{inset:11%;border-style:solid;border-color:rgba(255,201,139,.13) transparent rgba(255,92,30,.25) transparent;animation:portalSpinReverse 9s linear infinite}.portal-ring.mid{inset:14%;border:2px solid transparent;background:conic-gradient(from 15deg,transparent 0 8%,#ff6b24 10%,#ffd6a0 13%,transparent 17% 31%,#ff8a3d 33%,transparent 38% 59%,#ffd7b1 61%,transparent 66% 82%,#ff5a20 84%,transparent 90%);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;padding:2px;animation:portalSpin 7s linear infinite}.portal-ring.inner{inset:25%;border:1px solid rgba(255,200,160,.22);box-shadow:0 0 35px rgba(255,91,28,.2),inset 0 0 30px rgba(255,102,31,.08);animation:portalSpinReverse 5s linear infinite}.portal-spark{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 20deg,transparent 0 7%,rgba(255,199,128,.9) 8%,transparent 9% 20%,rgba(255,91,28,.8) 21%,transparent 22% 42%,rgba(255,227,196,.8) 43%,transparent 44% 63%,rgba(255,110,35,.85) 64%,transparent 65% 81%,rgba(255,190,110,.8) 82%,transparent 83%);filter:blur(.6px);animation:portalSpin 2.8s linear infinite;mask:radial-gradient(circle,transparent 0 42%,#000 44% 47%,transparent 49%);pointer-events:none}.portal-energy{position:absolute;border-radius:50%;pointer-events:none;opacity:.55;mix-blend-mode:screen}.energy-a{inset:9%;border:1px solid transparent;border-top-color:#ff7a2f;border-right-color:rgba(255,213,169,.55);animation:energyArc 3.2s ease-in-out infinite}.energy-b{inset:17%;border:1px solid transparent;border-left-color:#ffd4aa;border-bottom-color:#ff5a20;animation:energyArc 2.1s ease-in-out infinite reverse}.energy-c{inset:31%;border:1px dashed rgba(255,131,52,.5);animation:portalSpinReverse 6s linear infinite}.portal-core{position:absolute;width:47%;height:47%;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ffdcb8 0,#ff7c31 7%,#8d240d 23%,#170b07 55%,#020202 74%);box-shadow:0 0 35px rgba(255,95,31,.55),0 0 110px rgba(255,70,15,.22),inset 0 0 35px rgba(255,184,108,.18);overflow:hidden;animation:portalPulse 2.4s ease-in-out infinite}.portal-core::before{content:"";position:absolute;inset:-15%;background:conic-gradient(from 90deg,transparent,#ffbd72,transparent 18%,#ff5c20,transparent 34%,#ffe0bb,transparent 56%,#ff6b28,transparent 78%);filter:blur(10px);animation:portalSpin 3.8s linear infinite}.portal-core::after{content:"";position:absolute;inset:18%;border-radius:50%;background:#030303;box-shadow:0 0 30px rgba(255,96,35,.35);animation:portalPulse 1.8s ease-in-out infinite alternate}.portal-title{position:absolute;bottom:7%;right:12%;font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,198,145,.62);z-index:4}
+/* Social icons stay fixed in place. The portal moves — the icons do NOT orbit. */
+.portal-node{position:absolute;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#343434,#111 58%,#050505);border:1px solid rgba(255,223,194,.3);box-shadow:0 0 0 1px rgba(255,98,30,.08),0 10px 28px rgba(0,0,0,.55),0 0 22px rgba(255,88,28,.12);z-index:10;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s;cursor:pointer}
+.portal-node::before{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px solid rgba(255,107,39,.18);opacity:.65;transition:inset .25s,opacity .25s,box-shadow .25s}.portal-node::after{content:"";position:absolute;inset:-24px;border-radius:50%;border:1px solid rgba(255,116,48,.06);opacity:0;transition:opacity .25s,transform .25s;pointer-events:none}.portal-node:hover,.portal-node:focus-visible{transform:scale(1.16);background:radial-gradient(circle at 35% 30%,#4a3020,#17110d 58%,#050505);box-shadow:0 0 0 1px rgba(255,148,80,.5),0 0 24px rgba(255,91,30,.7),0 0 70px rgba(255,75,20,.3),0 14px 38px rgba(0,0,0,.65);outline:none}.portal-node:hover::before,.portal-node:focus-visible::before{inset:-16px;opacity:1;box-shadow:0 0 25px rgba(255,90,25,.55)}.portal-node:hover::after,.portal-node:focus-visible::after{opacity:1;animation:iconShock .7s ease-out infinite}.portal-node svg{width:29px;height:29px;fill:none;stroke:#f7eee5;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;position:relative;z-index:2;transition:transform .25s,filter .25s}.portal-node svg path{fill:none}.portal-node .dot{fill:#f7eee5;stroke:none}.node-github svg path{fill:#f7eee5;stroke:none}.portal-node:hover svg,.portal-node:focus-visible svg{transform:scale(1.08);filter:drop-shadow(0 0 7px rgba(255,133,61,.9))}.node-instagram{top:8%;left:20%;--beam-angle:32deg}.node-linkedin{top:17%;right:11%;--beam-angle:148deg}.node-github{bottom:15%;left:12%;--beam-angle:-28deg}.node-email{bottom:8%;right:22%;--beam-angle:-146deg}.node-phone{top:45%;right:3%;--beam-angle:178deg}
+@keyframes portalSpin{to{transform:rotate(360deg)}}@keyframes portalSpinReverse{to{transform:rotate(-360deg)}}@keyframes portalPulse{0%,100%{transform:scale(.96);opacity:.82}50%{transform:scale(1.04);opacity:1}}@keyframes energyArc{0%,100%{transform:rotate(-10deg) scale(.98);opacity:.35}50%{transform:rotate(14deg) scale(1.03);opacity:.9}}@keyframes iconShock{0%{transform:scale(.8);opacity:0}35%{opacity:1}100%{transform:scale(1.3);opacity:0}}
+.contact-bottom{display:flex;justify-content:space-between;align-items:end;gap:40px;position:relative;z-index:5}.contact-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}.contact-links a{font-size:12px;border:1px solid rgba(255,255,255,.22);padding:11px 14px;border-radius:100px;transition:background .3s,color .3s}.contact-links a:hover{background:#f4f3ef;color:#111}@media(max-width:900px){.portal-stage{right:-18vw;top:24%;width:560px;height:560px;min-width:560px;min-height:560px;opacity:.88}.contact h2{font-size:clamp(72px,20vw,150px)}.contact-intro{max-width:75vw}.portal-node{width:56px;height:56px}.portal-node svg{width:26px;height:26px}.portal-title{right:10%;bottom:9%}}@media(max-width:600px){.portal-stage{right:-43vw;top:27%;width:500px;height:500px;min-width:500px;min-height:500px}.contact-intro{max-width:88vw}.contact h2{margin-top:38vh}.contact-bottom{margin-top:5vh}.portal-node{width:50px;height:50px}.portal-node svg{width:23px;height:23px}.portal-title{display:none}}
+.footer{padding:24px 5vw;display:flex;justify-content:space-between;font-size:10px;text-transform:uppercase;letter-spacing:.12em}
+@media(max-width:800px){.navlinks{display:none}.hero{height:240vh}.hero h1{font-size:23vw}.hero-copy{bottom:12vh}.intro-grid{grid-template-columns:1fr;gap:35px}.section{padding:12vh 7vw}.identity-meta{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}.project{grid-template-columns:1fr;min-height:65vh;padding:12vh 0}.project:hover{padding-left:0}.cert-grid{grid-template-columns:1fr}.cert{min-height:350px}.cert-image-wrap{height:210px}.contact h2{font-size:24vw}.contact-bottom{align-items:start;gap:30px;flex-direction:column}.scrollhint{display:none}.social-orbit{position:relative;right:auto;top:auto;width:90vw;height:90vw;margin:60px auto 30px}.modal-close{right:0;top:-45px}.modal-caption{bottom:-30px}}
+</style>
+<style id="safari-video-fix">
+/* Safari / WebKit: keep hero media completely presentation-only. */
+#heroVideo::-webkit-media-controls,
+#heroVideo::-webkit-media-controls-enclosure,
+#heroVideo::-webkit-media-controls-panel,
+#heroVideo::-webkit-media-controls-play-button,
+#heroVideo::-webkit-media-controls-start-playback-button,
+#heroVideo::-webkit-media-controls-overlay-enclosure,
+#heroVideo::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+.hero video,
+#heroVideo {
+  pointer-events: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<nav><a class="logo" href="#top">KAVIN.</a><div class="navlinks"><a href="#about">About</a><a href="#work">Work</a><a href="#certifications">Certifications</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+<div class="progress"><i></i></div>
+
+<section class="hero" id="top">
+ <div class="hero-sticky">
+  <!-- Replace YOUR_KLING_VIDEO.mp4 with your generated Kling video filename -->
+  <video id="heroVideo" class="hero-video" defaultmuted poster="hero-poster.jpg" src="hero.mp4"controlslist="nodownload noplaybackrate nofullscreen noremoteplayback" disableremoteplayback autoplay muted playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback"></video>
+  <div class="hero-overlay"></div>
+  <div class="hero-copy">
+   <div class="eyebrow">AI / DATA / TECHNOLOGY — PORTFOLIO 2026</div>
+   <h1>KAVIN</h1>
+   <div class="hero-sub">I’m <b>Kavinilavan</b> — but most people know me as <b>Kavin.</b><br>AI & Data Science student, developer and technology creator turning ideas into intelligent systems.</div>
+  </div>
+  <div class="scrollhint">Scroll to enter</div>
+ </div>
+</section>
+
+<section class="section intro" id="about">
+ <div class="intro-grid">
+  <div class="label">01 / Identity<br><br>THE PERSON BEHIND THE WORK</div>
+  <div>
+   <div class="statement dialogue reveal">
+    <span class="dialogue-line">I’m Kavinilavan.</span>
+    <span class="dialogue-line">But if you ask around,</span>
+    <span class="dialogue-line">they’ll probably say <span>“Kavin.”</span></span>
+    <span class="dialogue-line">I build where <span>intelligence, technology</span></span>
+    <span class="dialogue-line">and <span>imagination</span> meet.</span>
+   </div>
+   <div class="identity-meta reveal">
+    <div class="meta-card"><strong>AI × DATA</strong><small>Core focus</small></div>
+    <div class="meta-card"><strong>03</strong><small>Featured projects</small></div>
+    <div class="meta-card"><strong>2026</strong><small>Current chapter</small></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<div class="marquee"><div class="marquee-track">ARTIFICIAL INTELLIGENCE ✦ MACHINE LEARNING ✦ DATA ✦ COMPUTER VISION ✦ SOFTWARE ✦ GENERATIVE AI ✦ ARTIFICIAL INTELLIGENCE ✦ MACHINE LEARNING ✦ DATA ✦ COMPUTER VISION ✦</div></div>
+
+<section class="section work" id="work">
+ <div class="label">02 / Selected projects</div>
+
+ <a class="project-link" href="https://github.com/kevin11-afk/AI-powered-crowd-monitor" target="_blank" rel="noopener noreferrer"><article class="project reveal">
+  <div class="project-num">01 — COMPUTER VISION</div>
+  <div><h3>AI POWERED<br>CROWD MONITOR</h3><p>A real-time computer-vision system designed to detect, monitor and analyze crowd activity using AI-powered visual intelligence.</p><div class="tags"><span class="tag">YOLO</span><span class="tag">OpenCV</span><span class="tag">Python</span><span class="tag">Computer Vision</span></div></div>
+ </article></a>
+
+ <a class="project-link" href="https://kevin11-afk.github.io/wedding-invite/" target="_blank" rel="noopener noreferrer"><article class="project reveal">
+  <div class="project-num">02 — WEB EXPERIENCE</div>
+  <div><h3>WEDDING<br>WEB</h3><p>A cinematic, responsive wedding website focused on storytelling, visual presentation, event information and an immersive guest experience.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">UX</span></div></div>
+ </article></a>
+
+ <a class="project-link" href="https://github.com/kevin11-afk/DSIRT_PHD_FINAL" target="_blank" rel="noopener noreferrer"><article class="project reveal">
+  <div class="project-num">03 — EDTECH / SYSTEMS</div>
+  <div><h3>EXAM<br>PORTAL</h3><p>A production-oriented Ph.D. entrance examination platform with role-based administration, secure assessment workflows, live monitoring and scalable infrastructure.</p><div class="tags"><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">WebRTC</span><span class="tag">Docker</span></div></div>
+ </article></a>
+</section>
+
+<section class="section certifications" id="certifications">
+ <div class="label">03 / Selected certifications</div>
+ <div class="statement reveal" style="margin-top:7vh">A few <span>credentials that matter.</span></div>
+ <div class="cert-grid">
+  <article tabindex="0" class="cert reveal" data-cert="certificates/microsoft-azure-internship.png" data-title="Microsoft Azure Internship"><div class="cert-image-wrap"><img class="cert-image" src="certificates/microsoft-azure-internship.png" alt="Microsoft Azure internship certificate"></div><div class="cert-info"><div class="cert-no">MICROSOFT ELEVATE × AICTE</div><h3>Microsoft Azure Internship</h3><p>4-week internship on Microsoft Azure under Emerging Technologies · Jan–Feb 2026.</p><span class="cert-badge">Internship</span></div></article>
+  <article tabindex="0" class="cert reveal" data-cert="certificates/microsoft-azure-course.png" data-title="Microsoft Azure"><div class="cert-image-wrap"><img class="cert-image" src="certificates/microsoft-azure-course.png" alt="Microsoft Azure course certificate"></div><div class="cert-info"><div class="cert-no">MICROSOFT ELEVATE × AICTE</div><h3>Microsoft Azure</h3><p>25-hour course completed through the Microsoft Elevate initiative.</p><span class="cert-badge">25 Hours</span></div></article>
+  <article tabindex="0" class="cert reveal" data-cert="certificates/microsoft-power-bi.png" data-title="Power BI — Business Applications"><div class="cert-image-wrap"><img class="cert-image" src="certificates/microsoft-power-bi.png" alt="Microsoft Power BI certificate"></div><div class="cert-info"><div class="cert-no">MICROSOFT ELEVATE × AICTE</div><h3>Power BI — Business Applications</h3><p>20-hour course focused on Power BI for business applications.</p><span class="cert-badge">20 Hours</span></div></article>
+  <article tabindex="0" class="cert reveal" data-cert="certificates/ibm-introduction-ai.png" data-title="Introduction to Artificial Intelligence"><div class="cert-image-wrap"><img class="cert-image" src="certificates/ibm-introduction-ai.png" alt="IBM SkillsBuild Introduction to Artificial Intelligence certificate"></div><div class="cert-info"><div class="cert-no">IBM SKILLSBUILD</div><h3>Introduction to Artificial Intelligence</h3><p>IBM SkillsBuild completion credential · January 2026.</p><span class="cert-badge">AI</span></div></article>
+  <article tabindex="0" class="cert reveal" data-cert="certificates/ibm-nlp-computer-vision.png" data-title="Natural Language Processing & Computer Vision"><div class="cert-image-wrap"><img class="cert-image" src="certificates/ibm-nlp-computer-vision.png" alt="IBM SkillsBuild NLP and Computer Vision certificate"></div><div class="cert-info"><div class="cert-no">IBM SKILLSBUILD</div><h3>Natural Language Processing & Computer Vision</h3><p>IBM SkillsBuild completion credential covering two core AI domains.</p><span class="cert-badge">NLP × CV</span></div></article>
+ </div>
+</section>
+
+<div class="cert-modal" id="certModal" aria-hidden="true"><div class="cert-modal-inner"><button class="modal-close" id="modalClose" aria-label="Close certificate">×</button><img id="modalImage" src="" alt="Certificate preview"><div class="modal-caption" id="modalCaption"></div></div></div>
+
+<section class="section expertise" id="skills">
+ <div class="label">04 / Capabilities</div>
+ <div class="statement reveal" style="margin-top:7vh">From <span>models and data</span> to interfaces people actually use.</div>
+ <div class="skills">
+  <div class="skill">Artificial Intelligence<small>Models · APIs · Automation</small></div>
+  <div class="skill">Machine Learning<small>Training · Evaluation · Pipelines</small></div>
+  <div class="skill">Data Science<small>Python · SQL · Analytics</small></div>
+  <div class="skill">Computer Vision<small>YOLO · OpenCV · Detection</small></div>
+  <div class="skill">Full-Stack Development<small>FastAPI · JavaScript · Databases</small></div>
+  <div class="skill">Generative AI<small>Creative systems · Experiments</small></div>
+</div>
+</section>
+
+<section class="section contact" id="contact">
+ <div><div class="label">05 / Next scene</div><div class="contact-intro">If the idea is ambitious enough, I’m probably interested. Let’s turn the next concept into something people can actually experience.</div></div>
+ <div class="portal-stage" id="socialPortal" aria-label="Kavin social portal">
+  <div class="portal-energy energy-a"></div><div class="portal-energy energy-b"></div><div class="portal-energy energy-c"></div>
+  <div class="portal-ring outer"></div><div class="portal-ring mid"></div><div class="portal-ring inner"></div>
+  <div class="portal-spark"></div><div class="portal-core"></div>
+  <div class="portal-title">ENTER THE NEXT DIMENSION</div>
+  <a class="portal-node node-instagram" href="https://www.instagram.com/kavineyy_18/?utm_source=qr&r=nametag" target="_blank" rel="noopener noreferrer" aria-label="Open Kavin's Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle class="dot" cx="17.4" cy="6.7" r="1.2"></circle></svg></a>
+  <a class="portal-node node-linkedin" href="https://www.linkedin.com/in/kavinilavan-a-342502324" target="_blank" rel="noopener noreferrer" aria-label="Open Kavin's LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M7.2 10v7.2M7.2 7.2v.1M10.7 17.2V10m0 3.2c.5-2 1.6-3.3 3.6-3.3 2.2 0 3.5 1.5 3.5 4.2v3.1"></path></svg></a>
+  <a class="portal-node node-github" href="https://github.com/kevin11-afk" target="_blank" rel="noopener noreferrer" aria-label="Open Kavin's GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.55.1.75-.24.75-.53v-2.08c-3.05.66-3.7-1.3-3.7-1.3-.5-1.27-1.23-1.6-1.23-1.6-1-.69.08-.68.08-.68 1.1.08 1.68 1.13 1.68 1.13.99 1.68 2.58 1.2 3.2.92.1-.71.39-1.2.7-1.48-2.44-.28-5-1.22-5-5.44 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.92 0 0 .92-.3 3.02 1.13a10.5 10.5 0 0 1 5.5 0c2.1-1.43 3.02-1.13 3.02-1.13.6 1.52.22 2.64.11 2.92.7.77 1.13 1.75 1.13 2.95 0 4.23-2.56 5.16-5 5.44.4.34.75 1 .75 2.03v3.01c0 .29.2.63.76.52A11.1 11.1 0 0 0 12 .9Z"></path></svg></a>
+  <a class="portal-node node-email" href="mailto:masterkavin007@gmail.com" aria-label="Email Kavin"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg></a>
+  <a class="portal-node node-phone" href="tel:+919787573851" aria-label="Call Kavin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 3.7 10 6.5 8.1 9.1c1.1 2.2 2.8 3.9 5 5l2.6-1.9 2.8 2.8-1.8 2.8c-.4.6-1.1.9-1.8.8-6.3-1-11.3-6-12.3-12.3-.1-.7.2-1.4.8-1.8l2.8-1.8Z"></path></svg></a>
+ </div>
+ <h2>LET'S<br>BUILD.</h2>
+ <div class="contact-bottom"><div><div class="label">OPEN TO PROJECTS · COLLABORATIONS · IDEAS</div><div class="contact-links"><a href="mailto:masterkavin007@gmail.com">Email ↗</a><a href="tel:+919787573851">Call ↗</a><a href="https://github.com/kevin11-afk" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></div>
+</section>
+
+<footer class="footer"><span>© 2026 KAVIN</span><span>AI × DATA × TECHNOLOGY</span></footer>
+
+<script>
+const video=document.getElementById('heroVideo');
+const hero=document.querySelector('.hero');
+const progress=document.querySelector('.progress i');
+const heroCopy=document.querySelector('.hero-copy');
+const reveals=document.querySelectorAll('.reveal');
+let duration=0,current=0,started=false;
+
+function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+
+/* Kill every native playback UI we can control. The hero video is display-only. */
+video.controls=false;
+video.muted=true;
+video.defaultMuted=true;
+video.setAttribute('muted','');
+video.setAttribute('playsinline','');
+video.setAttribute('autoplay','');
+video.setAttribute('disablepictureinpicture','');
+video.setAttribute('disableremoteplayback','');
+
+function showHero(){
+  heroCopy.classList.add('show');
+}
+
+function startHero(){
+  if(started) return;
+  duration=video.duration||duration||5;
+  video.currentTime=0;
+  const attempt=video.play();
+  if(attempt && typeof attempt.then==='function'){
+    attempt.then(()=>{
+      started=true;
+      duration=video.duration||duration||5;
+      setTimeout(showHero,550);
+    }).catch(()=>{
+      /* If autoplay is blocked or the video file is unavailable, keep the poster clean. */
+      setTimeout(showHero,550);
+    });
+  } else {
+    started=true;
+    setTimeout(showHero,550);
+  }
+}
+video.addEventListener('loadedmetadata',startHero,{once:false});
+video.addEventListener('canplay',startHero,{once:false});
+video.addEventListener('error',()=>{duration=0;showHero();},{once:true});
+window.addEventListener('load',()=>setTimeout(startHero,80));
+
+function tick(){
+  const rect=hero.getBoundingClientRect();
+  const max=Math.max(1,hero.offsetHeight-innerHeight);
+  const target=clamp(-rect.top/max,0,1);
+  current+=(target-current)*.12;
+  if(duration && Number.isFinite(duration)) video.currentTime=current*Math.max(0,duration-.04);
+  progress.style.height=(current*100)+'%';
+  const h1=document.querySelector('.hero h1');
+  h1.style.transform=`translateY(${-15*current}px) scale(${1-current*.18})`;
+  h1.style.opacity=1-current*.55;
+  requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.style.opacity=1;
+    e.target.style.transform='translateY(0)';
+    e.target.style.transition='opacity .9s ease,transform 1s cubic-bezier(.2,.7,.2,1)';
+  }
+}),{threshold:.14});
+reveals.forEach(x=>io.observe(x));
+
+document.querySelectorAll('nav a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+}));
+
+/* Certificate overview cards: hover/focus lift + full preview modal. */
+const modal=document.getElementById('certModal');
+const modalImage=document.getElementById('modalImage');
+const modalCaption=document.getElementById('modalCaption');
+const closeModal=()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');};
+const openCert=card=>{
+  modalImage.src=card.dataset.cert;
+  modalImage.alt=card.dataset.title;
+  modalCaption.textContent=card.dataset.title+' — click outside or press Escape to close';
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.classList.add('modal-open');
+};
+document.querySelectorAll('.cert').forEach(card=>{
+  card.addEventListener('click',()=>openCert(card));
+  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ') {e.preventDefault();openCert(card);}});
+});
+document.getElementById('modalClose').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+</script>
+
+
+
+</body>
+</html>
